@@ -1,0 +1,520 @@
+#serviceContainer {
+  width: 100%;
+  height: auto;
+  background-color: rgb(255, 254, 253);
+}
+
+#serviceContainer h3 {
+  text-align: center;
+  font-weight: bold;
+  color: #1c3681;
+}
+
+#outerWrapper {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  padding: 30px;
+}
+
+#innerWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+#eachService {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0 0 0;
+  gap: 50px;
+}
+
+#eachService .firstRow {
+  height: 33.33%;
+  text-align: right;
+}
+
+#eachService1 {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 0 0;
+}
+
+#eachService2 {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0 0 0;
+  gap: 50px;
+}
+
+#eachService2 .firstRow h5,
+h6 {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+}
+
+#eachService2 .firstRow {
+  height: 33.33%;
+}
+
+.vContainer {
+  padding: 40px 20px;
+}
+.topBox {
+  width: 75%;
+  margin: auto;
+  height: 180px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+}
+
+.topBoxLeft,
+.bottomBoxLeft {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  border: 1px solid #C4C4C4;
+  border-inline-start: none;
+
+}
+
+.topBoxRight,
+.bottomBoxRight {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  border: 1px solid #C4C4C4;
+  border-inline-end: none;
+
+
+}
+
+.topBoxLeft::before {
+  content: '1';
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 255, 0.167);
+  position: absolute;
+  top: -20px;
+  left: -22px;
+  z-index: 100;
+  background-color: #7686b3;
+  border-radius: 10px;
+  background-color: #324a8d;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+
+}
+
+.topBoxRight::after {
+  content: '2';
+  width: 50px;
+  height: 50px;
+  background-color: rgba(30, 0, 255, 0.164);
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  z-index: 100;
+  background-color: #324a8d;
+  border-radius: 10px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+}
+
+.topBox span::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: rgba(30, 0, 255, 0.164);
+  position: absolute;
+  right: 95px;
+  top: -10px;
+  z-index: 100;
+  background-color: #C4C4C4;
+  border-radius: 50%;
+}
+
+
+.bottomBox {
+  height: 170px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 75%;
+  margin: auto;
+
+}
+
+
+
+.bottomBoxLeft::before {
+  content: '3';
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 255, 0.167);
+  position: absolute;
+  top: -25px;
+  left: -22px;
+  z-index: 100;
+  background-color: #324a8d;
+  border-radius: 10px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+
+}
+
+.bottomBoxRight::after {
+  content: '4';
+  width: 50px;
+  height: 50px;
+  background-color: rgba(30, 0, 255, 0.164);
+  position: absolute;
+  right: -20px;
+  top: -25px;
+  z-index: 100;
+  background-color: #324a8d;
+  border-radius: 10px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+}
+
+
+.bottomBox span::before {
+  content: '5';
+  width: 50px;
+  height: 50px;
+  background-color: rgba(30, 0, 255, 0.164);
+  position: absolute;
+  top: 145px;
+  left: -22px;
+  z-index: 100;
+  background-color: #324a8d;
+  border-radius: 10px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+}
+
+.bottomBox span::after {
+  content: '6';
+  width: 50px;
+  height: 50px;
+  background-color: rgba(30, 0, 255, 0.164);
+  position: absolute;
+  right: -20px;
+  top: 145px;
+  z-index: 100;
+  background-color: #324a8d;
+  border-radius: 10px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.bottomBox #spans::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: rgba(30, 0, 255, 0.164);
+  position: absolute;
+  right: 95px;
+  top: -10px;
+  z-index: 100;
+  border-radius: 50%;
+  background-color: #C4C4C4;
+}
+
+.bottomBox #lastBox::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: rgba(30, 0, 255, 0.164);
+  position: absolute;
+  right: 45%;
+  top: 95%;
+  z-index: 100;
+  border-radius: 50%;
+  background-color: red;
+  background-color: #C4C4C4;
+}
+
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#serviceContainer {
+  width: 100%;
+  height: auto;
+  background-color: rgb(255, 254, 253);
+  animation: slideFadeIn 1s ease-out;
+}
+
+#outerWrapper {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  padding: 30px;
+  animation: slideFadeIn 1.2s ease-out;
+}
+
+#innerWrapper {
+  display: flex;
+  flex-direction: row;
+  animation: slideFadeIn 1.5s ease-out;
+}
+
+#eachService,
+#eachService1,
+#eachService2 {
+  animation: slideFadeIn 1.5s ease-out;
+  animation-delay: 0.3s;
+}
+
+#eachService .firstRow,
+#eachService2 .firstRow {
+  animation: slideFadeIn 1s ease-out;
+  animation-delay: 0.5s;
+}
+
+.topBox,
+.bottomBox {
+  animation: slideFadeIn 1.5s ease-out;
+  animation-delay: 0.7s;
+}
+
+@media screen and (max-width:767px) {
+
+  #outerWrapper {
+    width: 100%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  #innerWrapper {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  .topBox,
+  .bottomBox {
+    display: flex;
+    padding: 0;
+  }
+
+  .expandClass {
+    visibility: hidden;
+    font-size: 10px;
+  }
+
+  .firstRow h5:hover+.expandClass {
+    visibility: visible;
+  }
+
+  .firstRow h5 {
+    font-size: 10px;
+  }
+
+  .topBox span::after,
+  .bottomBox #spans::after,
+  .bottomBox #lastBox::after {
+    display: none;
+  }
+
+  .topBox {
+    display: flex;
+  }
+
+
+  .topBoxLeft::before,
+  .bottomBoxLeft::before,
+  .bottomBox span::before {
+    z-index: 100;
+    transform: translate(-46%, -10%);
+  }
+
+  .topBoxRight::after,
+  .bottomBoxRight::after,
+  .bottomBox span::after {
+
+    z-index: 100;
+    transform: translate(50%, -10%);
+
+
+  }
+
+  .topBoxRight::after,
+  .topBoxLeft::before,
+  .bottomBox span::after,
+  .bottomBox span::before,
+  .bottomBoxRight::after,
+  .bottomBoxLeft::before {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    font-size: 17px;
+  }
+
+  #eachService {
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #eachService1 {
+    width: 33.33%;
+
+  }
+
+  #eachService2 {
+    width: 33.33%;
+
+  }
+
+  #eachService>div:nth-of-type(1) h5,
+  #eachService2>div:nth-of-type(1) h5 {
+    padding-top: 45px;
+
+  }
+
+  #eachService>div:nth-of-type(2) h5 {
+    padding-top: 25px;
+  }
+
+  #eachService>div:nth-of-type(3) h5,
+  #eachService2>div:nth-of-type(3) h5 {
+    margin-top: -15px;
+  }
+
+  #eachService2>div:nth-of-type(2) h5 {
+    margin-top: -5px;
+  }
+}
+
+@media screen and (min-width:375px) and (max-width:424px) {
+
+  #eachService>div:nth-of-type(1) h5,
+  #eachService2>div:nth-of-type(1) h5 {
+    padding-top: 45px;
+  }
+
+  #eachService>div:nth-of-type(2) h5 {
+    padding-top: 35px;
+  }
+
+  #eachService>div:nth-of-type(3) h5,
+  #eachService2>div:nth-of-type(3) h5 {
+    padding-top: 15px;
+  }
+
+  #eachService2>div:nth-of-type(2) h5 {
+    padding-top: 30px;
+  }
+}
+
+@media screen and (min-width:425px) and (max-width:768px) {
+
+  #eachService>div:nth-of-type(1) h5,
+  #eachService2>div:nth-of-type(1) h5 {
+    padding-top: 45px;
+  }
+
+  #eachService>div:nth-of-type(2) h5 {
+    padding-top: 50px;
+  }
+
+  #eachService>div:nth-of-type(3) h5,
+  #eachService2>div:nth-of-type(3) h5 {
+    padding-top: 28px;
+  }
+
+  #eachService2>div:nth-of-type(2) h5 {
+    padding-top: 30px;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+
+  .topBox span::after {
+    left: 41%;
+    top: -10px;
+  }
+
+  .bottomBox #lastBox::after {
+    right: 41%;
+  }
+
+  .bottomBox #spans::after {
+    left: 41%;
+  }
+
+  .firstRow {
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    flex-direction: column;
+    margin-top: -48px;
+  }
+}
+
+@media screen and (min-width:1024px) and (max-width:1439px){
+
+  .topBox span::after {
+    left: 44%;
+  }
+
+  .bottomBox #lastBox::after {
+    right: 44%;
+    top:94%;
+  }
+
+  .bottomBox #spans::after {
+    left: 44%;
+  }
+
+}

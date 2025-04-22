@@ -1,0 +1,335 @@
+.headerWrapper {
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  transition: background-color 0.2s ease-out;
+  z-index: 1000;
+  background-color: #1c3681;
+  padding: 5px 20px;
+  scroll-behavior: smooth;
+}
+
+.scrolled {
+  background-color: white;
+}
+
+.logo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  width: clamp(120px, 20vw, 180px);
+  height: auto;
+  object-fit: contain;
+}
+
+.nav {
+  flex: 2;
+  display: flex;
+  position: relative;
+  z-index: 1001;
+}
+
+.navList {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 10px 0;
+}
+
+.activeLink {
+  text-decoration: none;
+}
+
+.listItem {
+  padding: 10px 26px;
+  color: white;
+  font-size: clamp(12px, 1vw, 18px); 
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: 'Outfit', sans-serif;
+  cursor: pointer;
+  transition: color 0.2s ease, opacity 0.2s ease;
+  opacity: 1;
+  visibility: visible;
+  text-decoration: none;
+}
+
+.scrolled .listItem {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.listItemHidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.listItemHovered {
+  color: #ffb400;
+  text-decoration: underline #ffb400 4px;
+  text-underline-offset: 10px;
+}
+
+.activeLink .listItem {
+  color: #ffb400;
+  text-decoration: underline #ffb400 4px;
+  text-underline-offset: 10px;
+}
+
+.iconWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -120%);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #1c3681;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 24px;
+}
+
+.scrolled .icon, .iconVisible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.iconHovered {
+  color: #39a7ff;
+}
+
+.tooltip {
+  position: absolute;
+  top: 170%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: clamp(12px, 1vw, 14px); 
+  font-family: 'Outfit', sans-serif;
+  white-space: nowrap;
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease;
+}
+
+.tooltipVisible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.contactWrap {
+  display: flex;
+  width: 20%;
+  align-items: center;
+}
+.navList a{
+  text-decoration: none;
+}
+
+.contactBtn {
+  width:auto;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: clamp(12px, 1vw, 14px);
+  text-transform: uppercase;
+  font-family: 'Outfit', sans-serif;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: 1px solid white;
+  color: white;
+  background-color: #1c3681;
+}
+
+.contactBtnScrolled {
+border: 1px solid #1c3681;
+color: #1c3681;
+background-color: #fff;
+}
+
+.contactBtnHovered {
+ background-color: #fff;
+ color: #1c3681;
+}
+
+.contactBtnHoveredScrolled {
+
+  color: #fff;
+  background-color: #1c3681;
+}
+
+.closeIcon {
+  display: none;
+  margin: auto;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+@media (max-width: 958px){
+  .headerWrapper {
+    justify-content: space-between;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 80%;
+    background-color: #6072a6;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    flex-direction: column;
+    /* justify-content: center; */
+    padding-top:100px;
+  }
+
+  .nav.open {
+    transform: translateX(0);
+  }
+
+  .navList {
+    flex-direction: column;
+    width: 100%;
+    }
+
+  .navItem {
+    padding: 20px 0;
+  }
+
+  .listItem {
+    opacity: 1;
+    visibility: visible;
+    font-size: clamp(16px, 5vw, 20px);
+    color: white;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .scrolled .listItem {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .listItemHidden {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .iconWrapper {
+    display: none;
+  }
+
+  .contactWrap {
+    margin: 20px 0;
+    width: auto;
+  }
+
+  .contactBtn {
+    width: 100%;
+    max-width: 200px;
+    padding: 12px 24px;
+    font-size: clamp(14px, 4vw, 16px);
+    border: none;
+    background-color: transparent;
+    color: white;
+    margin: auto;
+  }
+
+  .contactBtnScrolled {
+    color: white;
+  }
+
+  .closeIcon {
+    display: block;
+    position: fixed;
+    right: 20px;
+    padding: 10px;
+    transition: background-color 0.2s ease;
+  }
+
+  .closeIcon:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .close{
+    position: absolute;
+    top: 10%;
+    right: 20%;
+  }
+}
+
+@media (min-width:959px) and (max-width:1025px) {
+  .logo{
+    flex: 0.3;
+   
+  }
+  .nav {
+    flex: 4;
+    display: flex;
+    position: relative;
+    z-index: 1001;
+    
+  }
+  
+  .navList {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:10px;
+    list-style: none;
+   
+  }
+  
+  .navItem {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .activeLink {
+    text-decoration: none;
+  }
+  
+  .listItem {
+    color: white;
+    font-size: clamp(12px, 1vw, 18px); 
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Outfit', sans-serif;
+    cursor: pointer;
+    transition: color 0.2s ease, opacity 0.2s ease;
+    opacity: 1;
+    visibility: visible;
+    text-decoration: none;
+  }
+}
+
+

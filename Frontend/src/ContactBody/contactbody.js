@@ -93,7 +93,7 @@ export default function ContactBody() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5002/send-email",
+        "https://gstswebsite.onrender.com/send-email",
         formData
       );
       console.log("Response from server:", response.data);
